@@ -1,6 +1,6 @@
 export const THEMES = {
   black: {
-    name: "Black",
+    name: "White",
     bg: "#0a0a0a",
     surface: "#141414",
     textPrimary: "#e8e6e3",
@@ -10,7 +10,7 @@ export const THEMES = {
     isDark: true,
   },
   white: {
-    name: "White",
+    name: "Black",
     bg: "#f5f5f0",
     surface: "#ffffff",
     textPrimary: "#1a1a1a",
