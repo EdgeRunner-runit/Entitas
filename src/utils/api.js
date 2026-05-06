@@ -1,6 +1,6 @@
 const DEFAULT_API_KEY = "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";
-const BASE_URL = "https://integrate.api.nvidia.com/v1";
-const MODEL = "deepseek-ai/deepseek-r1";
+const BASE_URL = "/api/nvidia";
+const MODEL = "meta/llama-3.3-70b-instruct";
 
 export { DEFAULT_API_KEY };
 
@@ -24,7 +24,7 @@ export async function sendMessage(messages, apiKey) {
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
     throw new Error(
-      errorData.error?.message || `API request failed with status ${response.status}`
+      errorData.error?.message || errorData.detail || `API request failed with status ${response.status}`
     );
   }
 
