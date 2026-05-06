@@ -2,22 +2,22 @@ import { useState, useEffect } from "react";
 import { THEMES, FONTS, applyTheme, applyFont } from "../utils/themes";
 
 export default function SettingsPanel() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("wraith-theme") || "black");
-  const [font, setFont] = useState(() => localStorage.getItem("wraith-font") || "inter");
-  const [displayMode, setDisplayMode] = useState(() => localStorage.getItem("wraith-mode") || "dark");
+  const [theme, setTheme] = useState(() => localStorage.getItem("entitas-theme") || "black");
+  const [font, setFont] = useState(() => localStorage.getItem("entitas-font") || "inter");
+  const [displayMode, setDisplayMode] = useState(() => localStorage.getItem("entitas-mode") || "dark");
 
   useEffect(() => {
     applyTheme(theme, displayMode);
-    localStorage.setItem("wraith-theme", theme);
+    localStorage.setItem("entitas-theme", theme);
   }, [theme, displayMode]);
 
   useEffect(() => {
     applyFont(font);
-    localStorage.setItem("wraith-font", font);
+    localStorage.setItem("entitas-font", font);
   }, [font]);
 
   useEffect(() => {
-    localStorage.setItem("wraith-mode", displayMode);
+    localStorage.setItem("entitas-mode", displayMode);
   }, [displayMode]);
 
   useEffect(() => {

@@ -72,7 +72,7 @@ export default function Sidebar({ expanded, onToggle, activeView, onNavigate }) 
           )}
         </svg>
       </button>
-      {expanded && <div className="sidebar-brand">Wraith</div>}
+      {expanded && <div className="sidebar-brand">Entitas</div>}
       <nav className="sidebar-nav">
         {items.map((item) => (
           <button

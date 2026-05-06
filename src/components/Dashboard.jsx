@@ -9,7 +9,7 @@ import HelpPanel from "./HelpPanel";
 
 export default function Dashboard() {
   const [sidebarExpanded, setSidebarExpanded] = useState(() => {
-    const stored = sessionStorage.getItem("wraith-sidebar");
+    const stored = sessionStorage.getItem("entitas-sidebar");
     return stored !== null ? stored === "true" : true;
   });
   const [activeView, setActiveView] = useState("home");
@@ -19,7 +19,7 @@ export default function Dashboard() {
   const toggleSidebar = useCallback(() => {
     setSidebarExpanded((prev) => {
       const next = !prev;
-      sessionStorage.setItem("wraith-sidebar", String(next));
+      sessionStorage.setItem("entitas-sidebar", String(next));
       return next;
     });
   }, []);
@@ -60,7 +60,7 @@ export default function Dashboard() {
     if (activeView === "home") {
       return (
         <div className="home-view">
-          <div className="home-brand">Wraith</div>
+          <div className="home-brand">Entitas</div>
           <div className="home-tagline">Personality Simulation Engine</div>
           <button className="home-start-btn" onClick={() => setActiveView("simulation")}>
             New Simulation

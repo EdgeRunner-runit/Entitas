@@ -6,7 +6,7 @@ export default function Message({ message, onRetry }) {
     <div className={`message ${isUser ? "user" : isError ? "error" : "assistant"}`}>
       {!isUser && (
         <div className="message-sender">
-          {isError ? "System" : message.characterName || "Wraith"}
+          {isError ? "System" : message.characterName || "Entitas"}
         </div>
       )}
       <div className="message-bubble">{message.content}</div>

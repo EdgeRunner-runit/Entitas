@@ -13,14 +13,14 @@ export default function LoginScreen() {
       setError("Both fields are required");
       return;
     }
-    sessionStorage.setItem("wraith-user", username.trim());
+    sessionStorage.setItem("entitas-user", username.trim());
     navigate("/dashboard");
   };
 
   return (
     <div className="login-wrapper">
       <div className="login-box">
-        <div className="login-title">Wraith</div>
+        <div className="login-title">Entitas</div>
         <div className="login-subtitle">Personality Simulator</div>
         <form className="login-form" onSubmit={handleSubmit}>
           <input

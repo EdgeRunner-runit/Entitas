@@ -6,9 +6,9 @@ import { applyTheme, applyFont } from "./utils/themes";
 
 export default function App() {
   useEffect(() => {
-    const theme = localStorage.getItem("wraith-theme") || "black";
-    const font = localStorage.getItem("wraith-font") || "inter";
-    const mode = localStorage.getItem("wraith-mode") || "dark";
+    const theme = localStorage.getItem("entitas-theme") || "black";
+    const font = localStorage.getItem("entitas-font") || "inter";
+    const mode = localStorage.getItem("entitas-mode") || "dark";
     applyTheme(theme, mode);
     applyFont(font);
   }, []);
